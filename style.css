@@ -1,0 +1,354 @@
+.banner {
+  position: relative;
+  background: url("AdobeStock_10709082.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+.banner h1 {
+  display: none;
+}
+
+.diamond-shape {
+  position: absolute;
+  left: 15%;
+  height: 200px;
+  width: 200px;
+  background: url("Diamond Shape.png");
+  background-size: cover;
+}
+
+.featured-event .featured-label {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: #DA291C;
+  background-color: white;
+  display: inline-block;
+  padding: 0.8em;
+  text-transform: uppercase;
+}
+.featured-event .right-side {
+  position: relative;
+  padding: 0;
+  margin-bottom: -4px;
+}
+.featured-event .right-side img {
+  width: 100%;
+  height: auto;
+}
+.featured-event .left-side {
+  background: #DA291C;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+.featured-event .left-side h2 {
+  font-weight: 400;
+}
+.featured-event .left-side p {
+  max-width: 380px;
+}
+
+@media screen and (min-width: 768px) {
+  .featured-event {
+    box-sizing: border-box;
+    padding: 45px;
+    padding-bottom: 15px;
+  }
+
+  .diamond-shape {
+    height: 55vh;
+    width: 55vh;
+    left: 9%;
+  }
+
+  .banner {
+    height: 75vh;
+    max-height: 815px;
+    font-size: 1.1em;
+    background-position-x: -408px;
+  }
+  .banner h1 {
+    font-weight: 400;
+    display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .banner {
+    font-size: 2.1em;
+  }
+}
+.fill-div {
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.navbar {
+  padding: 19px 25px;
+  position: absolute;
+  z-index: 20;
+  color: white;
+}
+.navbar .logo {
+  font-size: 14px;
+  font-weight: 600;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar .navheader {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  text-transform: uppercase;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-desktop {
+  display: none;
+}
+.navbar-mobile {
+  width: 200px;
+  background-color: #DA291C;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -240px;
+}
+.navbar-mobile .close {
+  position: absolute;
+  top: 15px;
+  left: 215px;
+  font-size: 24px;
+}
+.navbar-mobile ul {
+  list-style: none;
+  padding-left: 25px;
+}
+.navbar-mobile ul a {
+  color: #FFFFFF;
+  font-size: 24px;
+  display: block;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    padding: 50px 35px;
+    display: flex;
+  }
+  .navbar .navheader {
+    flex-direction: row;
+    flex-basis: 30%;
+  }
+  .navbar .navheader .logo {
+    font-size: 28px;
+  }
+  .navbar .navheader .open {
+    display: none;
+  }
+  .navbar-mobile {
+    display: none;
+  }
+  .navbar-desktop {
+    flex-basis: 70%;
+    display: block;
+  }
+  .navbar-desktop ul {
+    float: right;
+  }
+  .navbar-desktop li {
+    display: inline-block;
+    margin-right: 38px;
+  }
+  .navbar-desktop li a {
+    font-size: 20px;
+    color: white;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Myriad Pro", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.intro {
+  max-width: 960px;
+  text-align: center;
+  font-size: 12px;
+  margin: 40px auto;
+  color: #95989A;
+}
+.intro h2 {
+  color: #DA291C;
+}
+
+.action-grid {
+  display: flex;
+  flex-direction: column;
+}
+.action-grid_item {
+  display: flex;
+  flex-basis: 100%;
+  color: white;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  height: 84px;
+  background: url("seedo.png");
+  background-position-y: center !important;
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  font-size: 1.8em;
+  text-shadow: 0 3px 6px black;
+  margin-bottom: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.action-grid_item:nth-child(2) {
+  background: url("eat.png");
+}
+.action-grid_item:nth-child(3) {
+  background: url("stay.png");
+}
+.action-grid_item:nth-child(4) {
+  background: url("event.png");
+}
+.action-grid_item i {
+  background-color: #DA291C;
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.2em;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.events {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.events .event {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: #1CCDDA;
+  display: flex;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+  padding: 55px;
+  align-items: center;
+  justify-content: center;
+}
+
+.read-more, .name, .date,
+.details {
+  margin-bottom: 15px;
+}
+
+.date,
+.details {
+  font-size: 12px;
+}
+
+.name {
+  font-size: 22px;
+}
+
+.read-more {
+  font-size: 11px;
+  color: white;
+}
+
+.subscribe {
+  width: 100%;
+  height: 150px;
+  background-color: #D0D0D0;
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.subscribe .input-group {
+  width: 100%;
+  display: flex;
+}
+.subscribe .input-group input {
+  flex-basis: 60%;
+  height: 44px;
+}
+.subscribe .input-group button {
+  flex-basis: 40%;
+  height: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    font-size: 20px;
+    margin: 100px auto;
+  }
+
+  .action-grid {
+    display: flex;
+    flex-direction: row;
+  }
+  .action-grid_item {
+    flex-basis: 25%;
+    height: 320px;
+    margin: 15px;
+    font-size: 1em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: none;
+  }
+  .action-grid_item i {
+    margin: 30px;
+  }
+
+  .event {
+    position: relative;
+    width: 350px;
+    height: 280px;
+  }
+
+  .events {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .action-grid_item {
+    font-size: 1.8em;
+    height: 420px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

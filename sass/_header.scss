@@ -1,0 +1,107 @@
+@import 'variables';
+.banner {
+  position: relative;
+  background: url('AdobeStock_10709082.png');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  h1 {
+    display: none;
+  }
+}
+
+.diamond-shape{
+  position: absolute;
+  left: 15%;
+  height: 200px;
+  width:200px;
+  background: url('Diamond Shape.png');
+  background-size: cover;
+}
+
+
+.featured-event{
+
+  .featured-label{
+    position: absolute;
+    top: 25px;
+    left:25px;
+    color: $color-1;
+    background-color: white;
+    display: inline-block;
+    padding: 0.8em;
+    text-transform: uppercase;
+  }
+  .right-side{
+    position: relative;
+    padding: 0;
+    margin-bottom: -4px; 
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .left-side{
+    background: $color-1;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+    h2{
+      font-weight: 400;
+    }
+    p {
+      max-width: 380px;
+    }
+  }
+}
+@media screen and (min-width: 768px){
+  .featured-event{
+    box-sizing: border-box;
+    padding: 45px;
+    padding-bottom: 15px;
+  }
+  .diamond-shape{
+    height: 55vh;
+    width: 55vh;
+    left: 9%;
+  }
+  .banner{
+    height: 75vh;
+    max-height: 815px;
+    font-size: 1.1em;
+    background-position-x: -408px;
+    h1{
+      font-weight: 400;
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 992px){
+  .banner{
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1200px){
+  .banner{
+    font-size: 2.1em;
+  }
+}
+
+.fill-div{
+  top:0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}

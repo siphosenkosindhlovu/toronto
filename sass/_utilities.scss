@@ -1,0 +1,175 @@
+@import "variables";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Myriad Pro", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+//components
+
+.intro {
+  max-width: 960px;
+  text-align: center;
+  font-size: 12px;
+  margin: 40px auto;
+  color: $color-5;
+  h2 {
+    color: $color-1;
+  }
+}
+
+.action-grid {
+  display: flex;
+  flex-direction: column;
+  &_item {
+    display: flex;
+    flex-basis: 100%;
+    color: white;
+    justify-content: space-between;
+    padding: {
+      left: 30px;
+      right: 30px;
+    }
+    align-items: center;
+    height: 84px;
+    background: url("seedo.png");
+    &:nth-child(2) {
+      background: url("eat.png");
+    }
+    &:nth-child(3) {
+      background: url("stay.png");
+    }
+    &:nth-child(4) {
+      background: url("event.png");
+    }
+    background-position-y: center !important;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    font-size: 1.8em;
+    text-shadow: 0 3px 6px black;
+    margin-bottom: 15px;
+    i {
+      background-color: $color-1;
+      box-sizing: content-box;
+      width: 1em;
+      height: 1em;
+      padding: 0.2em;
+      border-radius: 50%;
+      text-align: center;
+    }
+    margin: {
+      left: -15px;
+      right: -15px;
+    }
+  }
+}
+
+.events {
+  padding: {
+    left: 0px;
+    right: 0px;
+  }
+  &_slider {
+  }
+  .event {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background-color: $color-3;
+    display: flex;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    padding: 55px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+%margin {
+  margin-bottom: 15px;
+}
+.date,
+.details {
+  font-size: 12px;
+  @extend %margin;
+}
+.name {
+  font-size: 22px;
+  @extend %margin;
+}
+.read-more {
+  font-size: 11px;
+  @extend %margin;
+  color: white;
+}
+.social {
+}
+.subscribe {
+  width: 100%;
+  height: 150px;
+  background-color: $color-4;
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .input-group {
+    width: 100%;
+    display: flex;
+    input {
+      flex-basis: 60%;
+      height: 44px;
+    }
+    button {
+      flex-basis: 40%;
+      height: 44px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .intro {
+    font-size: 20px;
+    margin: 100px auto;
+  }
+  .action-grid {
+    display: flex;
+    flex-direction: row;
+    &_item {
+      flex-basis: 25%;
+      height: 320px;
+      margin: 15px;
+      font-size: 1em;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: none;
+      i {
+        margin: 30px;
+      }
+    }
+  }
+  .event {
+    position: relative;
+    width: 350px;
+    height: 280px;
+  }
+  .events {
+    padding: {
+      left: 30px;
+      right: 30px;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .action-grid {
+    &_item {
+      font-size: 1.8em;
+      height: 420px;
+    }
+  }
+}
